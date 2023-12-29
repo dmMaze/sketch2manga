@@ -1,0 +1,9 @@
+omegaconf
+scikit-image
+numpy
+opencv-python
+einops
+scikit-learn
+requests
+Pillow
+torch
