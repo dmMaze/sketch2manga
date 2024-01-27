@@ -14,7 +14,7 @@ import torch.nn.functional as F
 from einops import rearrange
 from sklearn.cluster import MiniBatchKMeans
 from sklearn.utils import shuffle
-
+from PIL import Image
 
 
 def get_template_histvq(template: np.ndarray) -> Tuple[List[np.ndarray]]:
@@ -240,6 +240,19 @@ def minmax_transform(img: np.ndarray):
     if _span == 0:
         _span += 1e-6
     img = (img - _min) / _span * 255
+    return img
+
+
+def multiply(img: np.ndarray, target: np.ndarray):
+    if target.shape[0] != img.shape[0] or target.shape[1] != img.shape[1]:
+        target = Image.fromarray(target).resize((img.shape[1], img.shape[0]), Image.Resampling.LANCZOS)
+        target = np.array(target)
+
+    intype = img.dtype
+    img = img * target.astype(np.float32)
+    
+    scaler = 255 / (img.max() - img.min() + 1e-9)
+    img = np.clip(img * scaler, 0, 255).astype(intype)
     return img
 
 
