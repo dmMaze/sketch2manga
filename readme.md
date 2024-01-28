@@ -1,6 +1,9 @@
-
-![rst](https://github.com/dmMaze/line2screentone/assets/51270320/9d86b00d-6a99-4306-8d6e-8e2eade9a78b)
-
+<p float="center">
+  <img src="https://github.com/dmMaze/line2screentone/assets/51270320/e235c6bc-b6ae-4d7f-9f73-a9aacb3a83fc" />
+  <br>
+    <em>Drag and drop into ComfyUI to load the workflow</em>
+  <a href="https://twitter.com/ini_pmh/status/715578786830417921/photo/1">(Source @ini_pmh)</a>
+</p>
 
 先下载anythingv4.5(或者任何版本的anything)和controlnet-lineart到stable-diffusion-webui的模型目录  
 
