@@ -7,7 +7,7 @@ import cv2 as Vision
 import requests as Requesting
 
 
-import Common.Constant as Constant
+from . import Constant
 
 
 def Save_Image ( Path_Image_Output_In , Image_In ) :

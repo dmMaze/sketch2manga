@@ -1,9 +1,14 @@
 
+
+import sys
+import os
+import os.path as osp
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
+
+
 import gradio as Framework
 
-import UI as UI
-
-import os
+import gradio_demo.UI as UI
 
 Title = F"Line to Screentone"
 

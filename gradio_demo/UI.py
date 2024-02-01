@@ -14,8 +14,7 @@ import utils.webui_screentone_text2img as ConvertTextToImage
 
 import utils.blend_screentone as Blend_Screentone
 
-import Common.Constant as Constant
-import Common.Utility as Utility
+from Common import Constant, Utility
 
 #region Pre-processing
 
