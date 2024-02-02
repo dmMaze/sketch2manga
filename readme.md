@@ -2,7 +2,6 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2312.01943-<COLOR>)](http://arxiv.org/abs/2312.01943)
 
-
 Apply screentone to line drawings or colored illustrations with diffusion models.
 
 <p float="center">
@@ -13,7 +12,7 @@ Apply screentone to line drawings or colored illustrations with diffusion models
 </p>
 
 <p float="center">
-  <img src="https://github.com/dmMaze/sketch2manga/assets/51270320/888c76d5-8fd1-49be-a6c0-1ae17e85acc5" />
+  <img src="https://github.com/dmMaze/sketch2manga/assets/51270320/ecaf6632-e108-4a8d-9e7e-8882bdb2e620" />
   <br>
     <em>Illustration2Manga - Drag and drop into ComfyUI to load the workflow </em>
   <a href="https://danbooru.donmai.us/posts/5493050">(Source @curecu8)</a>
