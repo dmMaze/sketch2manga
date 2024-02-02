@@ -7,9 +7,18 @@ Apply screentone to line drawings or colored illustrations with diffusion models
 <p float="center">
   <img src="https://github.com/dmMaze/sketch2manga/assets/51270320/e235c6bc-b6ae-4d7f-9f73-a9aacb3a83fc" />
   <br>
-    <em>Drag and drop into ComfyUI to load the workflow </em>
+    <em>Sketch2Manga - Drag and drop into ComfyUI to load the workflow </em>
   <a href="https://twitter.com/ini_pmh/status/715578786830417921/photo/1">(Source @ini_pmh)</a>
 </p>
+
+<p float="center">
+  <img src="https://github.com/dmMaze/sketch2manga/assets/51270320/888c76d5-8fd1-49be-a6c0-1ae17e85acc5" />
+  <br>
+    <em>Illustration2Manga - Drag and drop into ComfyUI to load the workflow </em>
+  <a href="https://danbooru.donmai.us/posts/5493050">(Source @curecu8)</a>
+</p>
+
+
 
 
 ## Usage
