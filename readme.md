@@ -44,3 +44,37 @@ python gradio_demo/launch.py
 
 #### SD-WebUI API
 There is an example ```webuiapi_demo.ipynb``` showcasing inference using SD-WebUI API, it is a bit outdated though, but the logic applied is the same.
+
+## Comparsion
+Our Illustration to Manga method compared with [Mimic Manga](https://lllyasviel.github.io/MangaFilter/) (considered as SOTA)
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="33%">Illustration (Input)</th>
+      <th align="center" width="33%">Mimic Manga</th>
+      <th align="center" width="33%">Ours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" >
+        <a href="https://github.com/dmMaze/sketch2manga/assets/51270320/50977ee7-d1a6-4fa0-a0b3-7cbb22b4b317">
+          <img alt="Input" src="https://github.com/dmMaze/sketch2manga/assets/51270320/50977ee7-d1a6-4fa0-a0b3-7cbb22b4b317" />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/dmMaze/sketch2manga/assets/51270320/75704188-3d2e-4358-8142-f17ecdf06c84">
+          <img alt="MimicManga" src="https://github.com/dmMaze/sketch2manga/assets/51270320/75704188-3d2e-4358-8142-f17ecdf06c84" />
+        </a>
+      </td>
+      <td align="center" >
+        <a href="https://github.com/dmMaze/sketch2manga/assets/51270320/2ad2947d-aaf9-428e-bace-d33a3b9679e3">
+          <img alt="Ours" src="https://github.com/dmMaze/sketch2manga/assets/51270320/2ad2947d-aaf9-428e-bace-d33a3b9679e3" />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
