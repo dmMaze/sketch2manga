@@ -59,7 +59,7 @@ class BlendScreentone:
             fgbg_hist_matching(sc_list, screentone)
             screentone_final = sc_list[0][..., 0]
             if sk is not None:
-                sk = sk.cpu().numpy()[..., 0]
+                sk = sk.cpu().numpy()[..., 0] * 255
                 screentone_final = multiply(screentone_final, sk)
 
             screentone_colorized_list.append(screentone_colorized)

@@ -1,6 +1,6 @@
 # Sketch2Manga
 
-[![arXiv](https://img.shields.io/badge/arXiv-2312.01943-<COLOR>)](http://arxiv.org/abs/2312.01943)
+[![arXiv](https://img.shields.io/badge/arXiv-2403.08266-<COLOR>)](https://arxiv.org/abs/2403.08266)
 
 Apply screentone to line drawings or colored illustrations with diffusion models.
 
@@ -44,6 +44,3 @@ python gradio_demo/launch.py
 
 #### SD-WebUI API
 There is an example ```webuiapi_demo.ipynb``` showcasing inference using SD-WebUI API, it is a bit outdated though, but the logic applied is the same.
-
-
-## BibTeX

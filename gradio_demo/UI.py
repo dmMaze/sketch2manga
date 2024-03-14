@@ -194,7 +194,7 @@ def Change_Input_Sketch(Path_img:str,):
         Utility.Update_Configuration \
             (
                 Name_Parameter_In=F"sd_model_checkpoint",
-                Value_Parameter_In=F"manga_34000.ckpt [29c34037ac]",
+                Value_Parameter_In=F"mangatone.ckpt [9381c1a502]",
             )
 
         # make vae setting to "mangatone_default"

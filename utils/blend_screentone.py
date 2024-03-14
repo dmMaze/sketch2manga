@@ -251,8 +251,11 @@ def multiply(img: np.ndarray, target: np.ndarray):
     intype = img.dtype
     img = img * target.astype(np.float32)
     
-    scaler = 255 / (img.max() - img.min() + 1e-9)
-    img = np.clip(img * scaler, 0, 255).astype(intype)
+    _min, _max = img.min(), img.max()
+    _span = _max - _min
+    if _span == 0:
+        _span += 1e-6
+    img = np.clip((img - _min) / _span * 255, 0, 255).astype(intype)
     return img
 
 
