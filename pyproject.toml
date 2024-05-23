@@ -1,0 +1,15 @@
+[project]
+name = "sketch2manga"
+description = "Apply screentone to line drawings or colored illustrations with diffusion models."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["# Original", "# torch", "#", "# Updated by Francis", "-f https://download.pytorch.org/whl/torch_stable.html", "# torch==2.1.0+cu121", "torch==2.1.2+cu121", "-f https://download.pytorch.org/whl/torch_stable.html", "# torchvision==0.16.0+cu121", "torchvision==0.16.2+cu121", "omegaconf", "scikit-image", "numpy", "opencv-python", "einops", "scikit-learn", "requests", "Pillow", "# Added by Francis", "tqdm", "pandas", "# Adding for Web UI", "gradio", "# Adding for additional function", "# requests"]
+
+[project.urls]
+Repository = "https://github.com/dmMaze/sketch2manga"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "sketch2manga"
+Icon = ""
