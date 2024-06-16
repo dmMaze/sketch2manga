@@ -85,7 +85,7 @@ def get_all_videos(video_dir: str, video_exts=VIDEO_EXTS, abs_path=False) -> Lis
     return vlist
 
 
-IMG_EXT = {'.bmp', '.jpg', '.png', '.jpeg'}
+IMG_EXT = {'.bmp', '.jpg', '.png', '.jpeg', '.webp'}
 def find_all_imgs(img_dir, abs_path=False):
     imglist = []
     dir_list = os.listdir(img_dir)
