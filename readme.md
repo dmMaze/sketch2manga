@@ -24,6 +24,9 @@ Apply screentone to line drawings or colored illustrations with diffusion models
 ## Usage
 
 ### Preperation
+
+Install [pytorch](https://pytorch.org/get-started/locally/)  
+
 Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI) or [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui), download a diffusion model for colorization (the demo used [meinapastel](https://civitai.com/models/11866/meinapastel) for ComfyUI, [anything-v4.5](https://huggingface.co/ckpt/anything-v4.5-vae-swapped/tree/main) for sd-webui) and [control_v11p_sd15_lineart](https://huggingface.co/lllyasviel/ControlNet-v1-1/blob/main/control_v11p_sd15_lineart.pth).  
 Download the finetuned [vae](https://huggingface.co/dreMaz/sketch2manga/blob/main/vae/mangatone_default.ckpt) and [diffusion model](https://huggingface.co/dreMaz/sketch2manga/blob/main/mangatone.ckpt) for screening.
 
