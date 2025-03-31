@@ -39,8 +39,9 @@ pip install -r requirements.txt
 ```
 Launch ComfyUI, drag and drop the figure above to load the workflow.
 
+
 ### Gradio Demo
-Clone this repo and install dependencies, launch sd-webui with argument ```--api```, and run
+Clone this repo and install dependencies, launch sd-webui with argument ```--api``` (We are using stable-diffusion-webui @ bef51aed and sd-webui-controlnet @ aa2aa81), and run
 ```
 python gradio_demo/launch.py
 ```

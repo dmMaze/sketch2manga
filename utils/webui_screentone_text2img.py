@@ -53,8 +53,7 @@ sd_params:
     controlnet:
       args: [
         {
-            "enabled": True,
-            "image": "",
+            "input_image": "",
             "module": "invert (from white bg & black line)",
             "model": "control_v11p_sd15_lineart [43d4be0d]",
             "weight": 1,
@@ -66,7 +65,8 @@ sd_params:
             # "guidance": 1,
             # "guidance_start": 0,
             "guidance_end": 1,
-            "pixel_perfect": True
+            "pixel_perfect": True,
+            "enabled" : True,
         }
       ]
 
@@ -107,13 +107,13 @@ def colorize_sketch(sketch, prompt, long_side=1024, cfg=ctrlnet_lineart_cfg, neg
 
     if cfg.mode == 'invert' or cfg.mode == 'line':
         img_b64 = img2b64(sketch_resized)
-        data['alwayson_scripts']['controlnet']['args'][0]['image'] = img_b64
+        data['alwayson_scripts']['controlnet']['args'][0]['input_image'] = img_b64
     elif cfg.mode == 'greyscale':
         img_b64 = img2b64(255 - np.array(sketch_resized.convert('L').convert('RGB')))
-        data['alwayson_scripts']['controlnet']['args'][0]['image'] = img_b64
+        data['alwayson_scripts']['controlnet']['args'][0]['input_image'] = img_b64
     elif cfg.mode == 'invert_greyscale':
         img_b64 = img2b64(np.array(sketch_resized.convert('L').convert('RGB')))
-        data['alwayson_scripts']['controlnet']['args'][0]['image'] = img_b64
+        data['alwayson_scripts']['controlnet']['args'][0]['input_image'] = img_b64
     else:
         raise
 
@@ -164,13 +164,13 @@ def color2screentone(args, save_results: bool = False, long_side: int = None):
         
         if args.mode == 'invert':
             img_b64 = img2b64(img_resized)
-            data['alwayson_scripts']['controlnet']['args'][0]['image'] = img_b64
+            data['alwayson_scripts']['controlnet']['args'][0]['input_image'] = img_b64
         elif args.mode == 'greyscale':
             img_b64 = img2b64(255 - np.array(img_resized.convert('L').convert('RGB')))
-            data['alwayson_scripts']['controlnet']['args'][0]['image'] = img_b64
+            data['alwayson_scripts']['controlnet']['args'][0]['input_image'] = img_b64
         elif args.mode == 'invert_greyscale':
             img_b64 = img2b64(np.array(img_resized.convert('L').convert('RGB')))
-            data['alwayson_scripts']['controlnet']['args'][0]['image'] = img_b64
+            data['alwayson_scripts']['controlnet']['args'][0]['input_image'] = img_b64
         else:
             raise
 
