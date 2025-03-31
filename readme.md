@@ -25,17 +25,12 @@ Apply screentone to line drawings or colored illustrations with diffusion models
 
 ### Preperation
 
-(Recommended)
-```  bash
-conda env create -f conda_env.yaml
-```
+### ComfyUI
 
-Install [pytorch](https://pytorch.org/get-started/locally/)  
-
-Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI) or [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui), download a diffusion model for colorization (the demo used [meinapastel](https://civitai.com/models/11866/meinapastel) for ComfyUI, [anything-v4.5](https://huggingface.co/ckpt/anything-v4.5-vae-swapped/tree/main) for sd-webui) and [control_v11p_sd15_lineart](https://huggingface.co/lllyasviel/ControlNet-v1-1/blob/main/control_v11p_sd15_lineart.pth).  
+Download a diffusion model for colorization (this demo used [meinapastel](https://civitai.com/models/11866/meinapastel) for ComfyUI) and [control_v11p_sd15_lineart](https://huggingface.co/lllyasviel/ControlNet-v1-1/blob/main/control_v11p_sd15_lineart.pth).  
 Download the finetuned [vae](https://huggingface.co/dreMaz/sketch2manga/blob/main/vae/mangatone_default.ckpt) and [diffusion model](https://huggingface.co/dreMaz/sketch2manga/blob/main/mangatone.ckpt) for screening.
 
-### ComfyUI
+Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI).  
 Clone this repo to the ComfyUI directory and install dependencies:
 ``` bash
 git clone https://github.com/dmMaze/sketch2manga [ComfyUI Directory]/custom_nodes/sketch2manga
@@ -46,7 +41,18 @@ Launch ComfyUI, drag and drop the figure above to load the workflow.
 
 
 ### Gradio Demo
-Clone this repo and install dependencies, launch sd-webui with argument ```--api``` (We are using stable-diffusion-webui @ bef51aed and sd-webui-controlnet @ aa2aa81), and run
+
+Prepare environment
+```  bash
+conda env create -f conda_env.yaml
+pip install git+https://github.com/openai/CLIP.git
+```
+
+Download a diffusion model for colorization (this demo used [anything-v4.5](https://huggingface.co/ckpt/anything-v4.5-vae-swapped/tree/main) for sd-webui) and [control_v11p_sd15_lineart](https://huggingface.co/lllyasviel/ControlNet-v1-1/blob/main/control_v11p_sd15_lineart.pth).  
+Download the finetuned [vae](https://huggingface.co/dreMaz/sketch2manga/blob/main/vae/mangatone_default.ckpt) and [diffusion model](https://huggingface.co/dreMaz/sketch2manga/blob/main/mangatone.ckpt) for screening.  
+
+We're using stable-diffusion-webui @ [bef51aed](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/bef51aed032c0aaa5cfd80445bc4cf0d85b408b5) and sd-webui-controlnet @ [aa2aa81](https://github.com/Mikubill/sd-webui-controlnet/commit/aa2aa812e86a1f47ef360572888d66027d640f60), other versions might not work. For convient, you can use this [hard fork](https://github.com/dmMaze/stable-diffusion-webui-with-controlnet).  Put models metioned above into corresponding sd-webui directories, and launch webui ```python webui.py --api```.  
+Finally launch the gradio demo:  
 ```
 python gradio_demo/launch.py
 ```

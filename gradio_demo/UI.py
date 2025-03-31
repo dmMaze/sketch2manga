@@ -22,8 +22,7 @@ from Common import Constant, Utility
 # import os as OS
 # OS.chdir(F"..")
 Directory_Current=os.getcwd()
-#
-print(F"{Directory_Current=}")
+
 
 #region Pre-processing
 
@@ -126,29 +125,18 @@ def Change_Input_Sketch(Path_img:str,):
 
 
     #Debug
-    print(F"{inspect.stack()[0][3]}")
+    # print(F"{inspect.stack()[0][3]}")
 
     List_Image_Return = list()
 
     if(Path_img is None):
 
-        #Debug 
-        print(F"{Path_img=}")
-
         pass
 
     elif(Path_img == ""):
-    
-        #Debug
-        print(F"{Path_img=}")
-
         pass
     
     else:
-        #
-        #Debug 
-        print(F"{Path_img=}")
-        #
 
         Utility.Update_Configuration \
             (
@@ -160,10 +148,6 @@ def Change_Input_Sketch(Path_img:str,):
         # load image from url
         # Image_Input = Image.open(F"{Constant.File_Workplace}{Constant.Image_Name}{Constant.Img_JPG}")
         Image_Input = Image.open(Path_img)
-        
-        #Debug
-        print(F"{Image_Input=}" )
-        #
 
         Utility.Update_Configuration \
             (
@@ -181,10 +165,6 @@ def Change_Input_Sketch(Path_img:str,):
                 url=Constant.Address_SDWUI_TextToImage
             )
         Colored_Img = List_Colored_Img[0]
-
-        #Debug
-        print(F"{Colored_Img=}")
-        #
 
         # Colored_Img.save(F"{Constant.File_Output}Colored_Img{Constant.Img_PNG}")
         List_Image_Return.append(Colored_Img)
@@ -216,10 +196,6 @@ def Change_Input_Sketch(Path_img:str,):
 
         Screentone_Rough = List_screentone_rough[0]
 
-        #Debug
-        print(F"{Screentone_Rough=}")
-        #
-
         # Screentone_Rough.save(F"{Constant.File_Output}Screen_Rough{Constant.Img_PNG}")
         List_Image_Return.append(Screentone_Rough)
 
@@ -242,13 +218,6 @@ def Change_Input_Sketch(Path_img:str,):
 
         Colored_Screentone = Image.fromarray(Screentone_Colorized_Array)
 
-
-        #Debug
-        print(F"{Colored_Screentone=}")
-
-        print(F"{len(Layers)=}")
-
-        print(F"{len(Layers_Visible)=}")
         #
 
 
@@ -289,9 +258,6 @@ def Change_Input_Sketch(Path_img:str,):
 
         Final_Image = Image.fromarray(SColored_To_Gray_List[0][..., 0])
 
-        #Debug
-        print(F"{Final_Image=}")
-        #
 
         # Final_Image.save(F"{Constant.File_Output}Final_Image{Constant.Img_PNG}")
         List_Image_Return.append(Final_Image)

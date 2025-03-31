@@ -54,20 +54,20 @@ def Update_Configuration(Name_Parameter_In, Value_Parameter_In):
 
 	#
 	#Debug
-	print(F"{List_Option_SDWUI=}")
+	# print(F"{List_Option_SDWUI=}")
 	#
 
 	List_Option_SDWUI_JSON = List_Option_SDWUI.json ()
 	#
 	# Debug
-	print(F"{List_Option_SDWUI_JSON=}")
-	print ( F"{List_Option_SDWUI_JSON[Name_Parameter_In]=}" )
+	# print(F"{List_Option_SDWUI_JSON=}")
+	# print ( F"{List_Option_SDWUI_JSON[Name_Parameter_In]=}" )
 	#
 	List_Option_SDWUI_JSON [ Name_Parameter_In ] = Value_Parameter_In
 	#
 	# Debug
 	# print(F"{List_Option_SDWUI_JSON=}")
-	print ( F"{List_Option_SDWUI_JSON[Name_Parameter_In]=}" )
+	# print ( F"{List_Option_SDWUI_JSON[Name_Parameter_In]=}" )
 	#
 	Requesting.post \
 	(
@@ -82,4 +82,4 @@ def Update_Configuration(Name_Parameter_In, Value_Parameter_In):
 		# json=payload,
 	)
 	List_Option_SDWUI_JSON = List_Option_SDWUI.json ()
-	print ( F"{List_Option_SDWUI_JSON[Name_Parameter_In]=}" )
+	# print ( F"{List_Option_SDWUI_JSON[Name_Parameter_In]=}" )
